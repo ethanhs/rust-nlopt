@@ -4,6 +4,7 @@ fn main() {
         .define("CMAKE_CXX_COMPILER", "c++") // Not used
         // The default C++ flags mess things up - override them
         .define("CMAKE_CXX_FLAGS", "")
+        .define("NLOPT_CXX", "ON")
         .build();
     // Lib could be in either of two locations
     println!("cargo:rustc-link-search=native={}/lib", dst.display());
